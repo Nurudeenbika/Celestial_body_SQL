@@ -51,30 +51,3 @@ fi
 
 USER_ID=$($PSQL "SELECT user_id FROM users WHERE username='$USERNAME'")
 INSERT_GAME=$($PSQL "INSERT INTO games(number_guesses, user_id) VALUES($GUESS, $USER_ID)")
-
-
-
-# if [[ $1 ]]
-# then
-#   #if [[ ! $1 =~ ^[0-9]+$ ]]
-#   # then
-#   # fi
-# fi
-# GET_USER=$($PSQL "SELECT username FROM users WHERE username='$USERNAME'")
-# GAME_PLAYED=$($PSQL "SELECT games_played FROM users WHERE username='$USERNAME'")
-# GUESS_NUMBER_ID=$($PSQL "SELECT guess_number_id FROM users WHERE username='$USERNAME'")
-# echo "Enter your username:"
-# read USERNAME
-# if [[ -z $GET_USER ]]
-# then
-#   INSERT_USER=$($PSQL "INSERT INTO users(username, games_played) VALUES('$USERNAME', $GAME_PLAYED)")
-#   GET_USER=$($PSQL "SELECT username FROM users WHERE username='$USERNAME'")
-#   Welcome, $GET_USER! It looks like this is your first time here.
-#   else
-#   Welcome back, $USERNAME! You have played $GAME_PLAYED games, and your best game took <best_game> guesses.
-# fi
-
-
-
-# RANDOM_NUMBER=$(( $RANDOM % 1000 ))
-#echo "$RANDOM_NUMBER"
